@@ -1,0 +1,19 @@
+{
+  "name": "frontend-test",
+  "version": "1.0.0",
+  "description": "Prueba técnica que se realiza a los candidatos al cargo de Frontend Developer.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "author": "Hector Barazorda",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "sass": "^1.83.0",
+    "vite": "^6.0.5"
+  }
+}
