@@ -1,0 +1,143 @@
+// styles.sass
+
+$primary-color: #3498db
+$product-border: 1px solid #ddd
+
+// Variables, mixins o estilos globales
+body
+  font-family: Arial, sans-serif
+  margin: 0
+  padding: 0
+  background-color: #f5f5f5
+
+
+.title
+  text-align: center
+  margin-top: 2rem
+.products-list
+  padding-left: 0
+  list-style: none
+  display: grid
+  gap: 1rem
+  grid-template-columns: repeat(2, 1fr)  // En pantallas grandes, 2 items por fila
+
+  // Media query para pantallas pequeñas
+  @media (max-width: 768px)
+    grid-template-columns: 1fr  // En pantallas pequeñas, 1 item por fila
+
+.product-item
+  background: #fff
+  border: $product-border
+  border-radius: 8px
+  text-align: center
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.product-item img
+  max-width: 100%
+  height: auto
+  border-radius: 4px
+
+.product-item h3
+  font-size: 1.2rem
+  color: $primary-color
+
+.product-item p
+  font-size: 1rem
+  color: #555
+
+.filter-container
+  display: none 
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+.filter
+  padding:10px
+
+  position: relative
+  border: #3498db 1px solid
+  display: flex
+  align-items: left
+  justify-content: space-between
+  margin: auto
+  background: #fff
+  flex-direction: column
+  width: 200px
+  gap: 1rem
+  .filter-item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 1rem
+    border-bottom: 1px solid #ddd
+  h2
+    font-size: 0.8rem
+    text-align: left
+  label
+    font-size: 1rem
+    color: #555
+  input
+    margin-right: 0.5rem
+
+  
+
+.footer
+  margin-top: 2rem
+  display: flex
+  justify-content: center
+  gap: 1rem
+  background: #3498db
+
+.filterBtn
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #3498db
+  color: #fff
+  padding: 0.5rem 1rem
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  position: sticky
+  bottom: 0
+  left: 47%
+.filterBtnClear
+  display: flex
+  justify-content: center
+  align-items: center
+  background: white
+  color: #3498db
+  padding: 0.5rem 1rem
+  border: 1px solid #3498db
+  border-radius: 4px
+  cursor: pointer
+  position: sticky
+  bottom: 0
+  left: 49%
+
+.button-close
+  position: absolute
+  top: 1rem
+  right: 1rem
+  background: white
+  color: #3498db
+  padding: 0.5rem 1rem
+  border: 1px solid #3498db
+
+  cursor: pointer
+.filter-icon
+    width: 1.5rem
+    height: 1.5rem
+    fill: #fff
+
+.button-buy
+    background: #3498db
+    color: #fff
+    padding: 0.5rem 1rem
+    border: none
+    width: 100%
+    border-radius:0 0 8px 8px
+.product-text
+  padding: 1rem
