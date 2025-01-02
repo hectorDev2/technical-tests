@@ -3,11 +3,25 @@ import { Square } from "./components/Square";
 import { useBoard } from "./hooks/useBoard";
 
 function App() {
-  const { board, turn, winner, updateBoard, handleClickReset } = useBoard();
+  const {
+    board,
+    turn,
+    winner,
+    updateBoard,
+    handleClickReset,
+    handleClickResetGame,
+  } = useBoard();
+  const statics = JSON.parse(localStorage.getItem("statistics") || "{}");
+  console.log(statics);
 
   return (
     <main className="board">
       <h1>Tic-Tac-Toe</h1>
+      <div className="container-reset">
+        <button className="reset" onClick={handleClickReset}>
+          Reset
+        </button>
+      </div>
       <section className="game">
         {board?.map((_: unknown, i: number) => (
           <Square index={i} updateBoard={updateBoard} key={i}>
@@ -21,14 +35,16 @@ function App() {
         </div>
         <div className="statistics">
           <h1>Statistics</h1>
-          <h2 className="playerOne">X won 2 times</h2>
-          <h2 className="playerOne">X won 2 times</h2>
+          <h2 className="playerOne">X won {statics["X"]} times</h2>
+          <h2 className="playerOne">O won {statics["O"]} times</h2>
         </div>
-        //make a button to reset the game
-        <button className="reset" onClick={handleClickReset}>
-          Reset
-        </button>
       </section>
+      <div className="container-reset">
+        <button className="reset" onClick={handleClickResetGame}>
+          Reset all statistics
+        </button>
+      </div>
+
       {winner !== null && (
         <WinnerModal winner={winner} resetGame={handleClickReset} />
       )}

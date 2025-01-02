@@ -151,3 +151,8 @@ body {
   background:#00e5ff !important;
     color: #fff;
 }
+.container-reset{
+  display:flex;
+  justify-content: right;
+  margin:auto;
+}
