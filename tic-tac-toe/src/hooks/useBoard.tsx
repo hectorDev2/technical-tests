@@ -83,6 +83,7 @@ export const useBoard = () => {
   useEffect(() => {
     const statistics = getItem("statistics");
 
+    saveLocalStorage("board", board);
     if (winner != null)
       saveLocalStorage(
         "statistics",
@@ -92,11 +93,20 @@ export const useBoard = () => {
         })
       );
   }, [board, winner, getItem]);
+  const handleClickResetGame = () => {
+    console.log("reset");
+    setBoard(Array(9).fill(null));
+    setTurn("X");
+    setWinner(null);
+    saveLocalStorage("statistics", JSON.stringify({ X: 0, O: 0 }));
+    resetLocalStorageGame();
+  };
   return {
     board,
     turn,
     winner,
     updateBoard,
     handleClickReset,
+    handleClickResetGame,
   };
 };
