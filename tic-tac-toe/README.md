@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Tic Tac Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este es un proyecto de un juego de Tic Tac Toe (Tres en Raya) desarrollado en [lenguaje de programación]. El objetivo del juego es alinear tres de tus símbolos (X o O) en una fila, columna o diagonal antes que tu oponente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- Juego para dos jugadores
+- Interfaz gráfica simple
+- Verificación automática de ganadores
+- Reinicio del juego
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalación
 
-- Configure the top-level `parserOptions` property like this:
+1. Clona este repositorio en tu máquina local:
+    ```sh
+    git clone https://github.com/tu-usuario/tic-tac-toe.git
+    ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Navega al directorio del proyecto:
+    ```sh
+    cd tic-tac-toe
+    ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. Instala las dependencias necesarias (si las hay):
+    ```sh
+    [comando de instalación de dependencias]
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Uso
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Ejecuta el juego con el siguiente comando:
+    ```sh
+    [comando para ejecutar el juego]
+    ```
+
+2. Sigue las instrucciones en pantalla para jugar.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue los siguientes pasos para contribuir:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva característica'`).
+4. Sube tus cambios a tu repositorio (`git push origin feature/nueva-caracteristica`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Contacto
+
+[Hector Barazorda] - [ph.barazorda@gmail.com]
+
