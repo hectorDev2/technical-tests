@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getFirstsWords, getUrlToImg } from "../utils/severals";
-import { FETCH_URL, URL_IMG } from "../vars";
+import { CAT_PREFIX_IMAGE_URL, FETCH_URL, URL_IMG } from "../vars";
 
 const fetchFact = async () => {
   const fetchData = await fetch(FETCH_URL);
@@ -30,5 +30,5 @@ export const useFact = () => {
     getImg(catFact).then((img) => setCatImg(img));
   }, [catFact]);
 
-  return [catFact, catImg, otherFact];
+  return [catFact, `${CAT_PREFIX_IMAGE_URL}${catImg}`, otherFact];
 };
