@@ -12,9 +12,8 @@ export const App = () => {
   return (
     <div>
       <h1>Cat Fact</h1>
-      <h2>{catFact}</h2>
+      {catFact && <h2>{catFact}</h2>}
       <button onClick={otherFact}>New Fact</button>
-
       <div className="containerImg">
         <img src={`${CAT_PREFIX_IMAGE_URL}${catImg}`} alt="" />
       </div>
